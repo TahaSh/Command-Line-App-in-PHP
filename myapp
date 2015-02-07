@@ -1,0 +1,12 @@
+#! /usr/bin/env php
+
+<?php
+
+require 'vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use Acme\Commands\GreetCommand;
+
+$console = new Application('My App', '1.0');
+$console->add(new GreetCommand);
+$console->run();
